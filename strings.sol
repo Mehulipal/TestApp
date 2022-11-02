@@ -42,7 +42,7 @@ library strings {
         uint _ptr;
     }
 
-    function memcpy(uint dest, uint src, uint len) private pure {
+    function memcpy(uint dest, uint src, uint len) private _pure {
         // Copy word-length chunks while possible
         for(; len >= 32; len -= 32) {
             assembly {
